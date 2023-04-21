@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "aframe-web-portals": "^1.0.1",
+    "http-server": "^14.1.1"
+  }
+}
