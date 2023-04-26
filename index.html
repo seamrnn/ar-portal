@@ -2,16 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>360&deg; Image</title>
-    <meta name="description" content="360&deg; Image - A-Frame">
+    <title>AR Portal Door</title>
+    <meta name="description" content="AR Portal Door - A-Frame">
+    <script src="https://cdn.jsdelivr.net/npm/three"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@2.2.1"></script>
     <script src="assests/js/aframe-master.js"></script>
+    <script src="assests/js/Portal360.js"></script>
+    <script src="assests/js/arjs-portal-door.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-sky src="assests/images/jhon_wick.jpeg" rotation="0 -130 0"></a-sky>
-
-      <a-text font="kelsonsans" value="Jhon Wick" width="6" position="-2.5 0.25 -1.5"
-              rotation="0 15 0"></a-text>
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-entity position="0 0 0">
+          <a-portal-door url="assests/images/jhon_wick.jpeg"></a-portal-door>
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
